@@ -12,12 +12,16 @@ int firstNumber = Convert.ToInt32(Console.ReadLine());
 
 
 // 2.chi vazifa
-int[] number = {1, 2, 3, 4, 5, 6, 7, 8} ;
-for(int iterator = 1; iterator <= number.Length; iterator+=8) 
+int[] number = {6, 9, 8, 4, 85, 7, 125, 5} ;
+Array.Sort(number);
 
-for(int innerIterator = 8; innerIterator == number.Length; innerIterator++)
+for(int iterator = 0 ; iterator < number.Length; iterator += number.Length) 
 {
-    System.Console.WriteLine($"{iterator} x {innerIterator} = {iterator * innerIterator}");
+   
+   for(int innerIterator = number.Length-1;  innerIterator <= number.Length; innerIterator++)
+   {
+      System.Console.WriteLine($"{number[iterator]} x {number[innerIterator]} = {number[iterator] * number[innerIterator]}");
+   }  
 }
 
 
